@@ -1,0 +1,142 @@
+{
+  "captured_utc": "2026-11-08T13:35:21.266960+00:00",
+  "runtime": "CPython 3.12.6",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "command": "python tests/student/scale_checks.py",
+  "timeout_seconds_per_batch": 20,
+  "output_limit_bytes_per_batch": 8388608,
+  "timing_scope": "Real subprocess launch, JSONL input transfer/parsing, algorithms and output serialization/transfer; excludes parent generator/oracle/validation.",
+  "limitations": "Local Windows verification; no CPU affinity or memory-container cap was enforced. Times are observations, not worst-case guarantees.",
+  "batches": [
+    {
+      "name": "lcs_million_cells",
+      "requests": 3,
+      "passed": true,
+      "process_seconds": 0.3014022000006662,
+      "output_utf8_bytes": 2085,
+      "input_sha256": "684cb0210dcbc6059a04d108d52fc6f127fc13f64792dbd964203a2a959c0db6",
+      "actual_output_sha256": "057f1cef86883c2952e170780a15f0464a8c35c23d1ac907aec7e00ff8b74480",
+      "expected_justification": "Shifted alternating strings lose one endpoint; disjoint alphabets give zero; equal strings give 1000."
+    },
+    {
+      "name": "merge_200_large_and_zero",
+      "requests": 2,
+      "passed": true,
+      "process_seconds": 0.19225120000010065,
+      "output_utf8_bytes": 5074,
+      "input_sha256": "d6bb3d94d949e034282c6c22b14e3f2b19229a2915d4a55599fa357546e6fccb",
+      "actual_output_sha256": "70a6f392598c7324a362ad1d0e7b987c47cf08a985aa421db1ec3cf0568e4baf",
+      "expected_justification": "Equal weights: minimum external path length 56*7 + 144*8 = 1544; ordered balanced splits attain it. Zeros cost zero."
+    },
+    {
+      "name": "tree_100000_chain_star_negative",
+      "requests": 3,
+      "passed": true,
+      "process_seconds": 0.33162329999868234,
+      "output_utf8_bytes": 883438,
+      "input_sha256": "b3edc310d871078bfef7de1fec1624e22346c50fc64c3dbc5e318793b7e19b60",
+      "actual_output_sha256": "644f22a1d1bba245de7c92bea82e45ff94f8d1cae17ef7e80e4216b2e7b5f5a3",
+      "expected_justification": "Even chain permits exactly 50000 vertices; star optimum is all 99999 leaves; negative weights favour the empty set."
+    },
+    {
+      "name": "naive_3000_limits",
+      "requests": 3,
+      "passed": true,
+      "process_seconds": 0.14789920000112033,
+      "output_utf8_bytes": 20340,
+      "input_sha256": "b6a9a9a964812e28961bcf41b8457c9b01738dcadb60f371b558edc03426d9de",
+      "actual_output_sha256": "2326f4dbcace649d40c8cc528c17cdf2c538c21bbd26ef72e1ea9ad920f2da57",
+      "expected_justification": "All-a starts are exactly 0..n-m; empty pattern matches n+1 boundaries."
+    },
+    {
+      "name": "kmp_200000_100000_limits",
+      "requests": 3,
+      "passed": true,
+      "process_seconds": 0.1205100000006496,
+      "output_utf8_bytes": 1877843,
+      "input_sha256": "388f9b27f334e842bc908d27aae4af5f8e15fc5c403905c454d36b5ae65afa33",
+      "actual_output_sha256": "a2d092d1048839239e57a21c2128ae28690de38db89ba2799f57df7840631aa0",
+      "expected_justification": "All-a overlap count n-m+1; absent b rejects long almost-matches; empty pattern emits every boundary."
+    },
+    {
+      "name": "rk_20million_product_and_10000_length",
+      "requests": 3,
+      "passed": true,
+      "process_seconds": 0.7912237000000459,
+      "output_utf8_bytes": 38945,
+      "input_sha256": "0cca9763883cc8c2a1a95629f52195871325276754b28a42accc58222369b5ad",
+      "actual_output_sha256": "76591457bd67cc1bfc5319aecbb8ed4e43facbe944ce13eab88b2e4571e81032",
+      "expected_justification": "First two products equal 20000000. All-a windows match, longer pattern cannot fit; dj collides with ab but is unequal."
+    },
+    {
+      "name": "suffix_50000_repetitive",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.27526080000097863,
+      "output_utf8_bytes": 627810,
+      "input_sha256": "5a56b1d48ab505b59c012970dcff37b4945accfcd6c9d1ca82d0fd3a3ddb0b09",
+      "actual_output_sha256": "cc07baca6138c26eab2ab43ecbe6f34cb57a01569257b3a0efc33b9315159019",
+      "expected_justification": "All suffixes are a-runs: increasing length gives suffix order; adjacent common prefix lengths are 0..49999."
+    },
+    {
+      "name": "suffix_50000_random_ascii",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.14594109999961802,
+      "output_utf8_bytes": 388925,
+      "input_sha256": "d8738cf7b45352631d58cc071ed6f83aabe9ccef5ea4f1453b18d76ee9344857",
+      "actual_output_sha256": "4aba4b88d123ebca5559630611551375850bc7145f104cd0c8562cf3eb00cd22",
+      "expected_justification": "Seed 4201, uniform printable ASCII 32..126. Independent literal suffix comparator and direct adjacent prefix comparisons."
+    },
+    {
+      "name": "aho_10000_duplicates_dense_200000_text",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.056309800000235555,
+      "output_utf8_bytes": 70015,
+      "input_sha256": "f97079c40cb6ff9783d4e6ff7ed2599e8e8de9d4b779d4657b21941890046da6",
+      "actual_output_sha256": "987e1d3e321c4baa43305aba6cf90c36fcfa22fe7d030e1a3db3b1ca097592ec",
+      "expected_justification": "Exactly 100000 total pattern characters. Each duplicate length-10 pattern has 200000-10+1 overlapping starts."
+    },
+    {
+      "name": "aho_100_text_rows_10000_columns",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.14972660000057658,
+      "output_utf8_bytes": 5000213,
+      "input_sha256": "7203b62a26b1cdd8d7dd4cd3e108f7121db47b9770e4e28e7f1c4c193d7ef834",
+      "actual_output_sha256": "705ace9ae92742201b8fac6cba65aee2d62d0941eafad0798555715648f57091",
+      "expected_justification": "100 independent texts total 200000 characters; every row/duplicate column has 2000-10+1 = 1991."
+    },
+    {
+      "name": "aho_100001_states_deep_failure_chain",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.633510200001183,
+      "output_utf8_bytes": 22,
+      "input_sha256": "0dd1a5025eab825170bba3b78abfeaf408c70a021d98ef2f5121a6086c3bb7a5",
+      "actual_output_sha256": "d60355183024d8cb86782c76c3455c323da0b12dbd0a058715299e72ea322c1b",
+      "expected_justification": "One 100000-character pattern creates 100001 trie states; overlapping starts total 100001."
+    },
+    {
+      "name": "aho_dense_suffix_patterns_L100000",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 0.05746109999927285,
+      "output_utf8_bytes": 3144,
+      "input_sha256": "b8082afb961352a900c41a1ea04d2b62d2d29391e72d0ecc15e208b9a091dba4",
+      "actual_output_sha256": "95f4e27c8cee2b555a04ab00092d544ec18b7e70ff10ee9515dff1257a3dbb94",
+      "expected_justification": "Pattern lengths 1..446 plus duplicate length 319 sum to 100000. Every pattern is a suffix of longer ones; each count is 200001-length."
+    },
+    {
+      "name": "aho_wide_ascii_trie_100_texts",
+      "requests": 1,
+      "passed": true,
+      "process_seconds": 1.1266205000010814,
+      "output_utf8_bytes": 2000213,
+      "input_sha256": "3a945c636bdd2bf89b61487658e40555cd69cb2aaa802fdc49d1e6947cc2a93b",
+      "actual_output_sha256": "c9504be7dbd16c082fffc6d678757b7ca01ac9adad7aa469152357a84812c6c2",
+      "expected_justification": "Seed 4202, 10000 length-10 printable ASCII patterns (L=100000). An all-a text only matches the exact pattern a^10."
+    }
+  ]
+}

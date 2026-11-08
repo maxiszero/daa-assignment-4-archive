@@ -1,0 +1,32 @@
+Captured UTC: 2026-11-08T13:33:01.007441+00:00
+Runtime: CPython 3.12.6
+Platform: Windows-10-10.0.19045-SP0
+Command: python tests/student/capture_evidence.py
+Fixtures: 25/25 semantically valid.
+
+test_aho_duplicates_suffix_matches_overlap_and_state_reset (test_algorithms.AlgorithmsTests.test_aho_duplicates_suffix_matches_overlap_and_state_reset) ... ok
+test_aho_empty_dictionary_empty_texts_and_empty_text (test_algorithms.AlgorithmsTests.test_aho_empty_dictionary_empty_texts_and_empty_text) ... ok
+test_aho_random_against_independent_pattern_searches (test_algorithms.AlgorithmsTests.test_aho_random_against_independent_pattern_searches) ... ok
+test_kmp_nested_prefix_fallback_and_overlap (test_algorithms.AlgorithmsTests.test_kmp_nested_prefix_fallback_and_overlap) ... ok
+test_lcs_empty_disjoint_and_subsequence_not_substring (test_algorithms.AlgorithmsTests.test_lcs_empty_disjoint_and_subsequence_not_substring) ... ok
+test_lcs_random_against_enumerated_subsequences (test_algorithms.AlgorithmsTests.test_lcs_random_against_enumerated_subsequences) ... ok
+test_merge_empty_single_zero_and_large_cost (test_algorithms.AlgorithmsTests.test_merge_empty_single_zero_and_large_cost) ... ok
+test_merge_nonadjacent_greedy_counterexample (test_algorithms.AlgorithmsTests.test_merge_nonadjacent_greedy_counterexample) ... ok
+test_merge_random_against_all_adjacent_merge_schedules (test_algorithms.AlgorithmsTests.test_merge_random_against_all_adjacent_merge_schedules) ... ok
+test_mixed_jsonl_requests_three_batches_in_one_process (test_algorithms.AlgorithmsTests.test_mixed_jsonl_requests_three_batches_in_one_process) ... ok
+test_rk_actual_hash_collision_is_rejected (test_algorithms.AlgorithmsTests.test_rk_actual_hash_collision_is_rejected) ... ok
+test_search_empty_overlapping_last_start_long_pattern_and_ascii (test_algorithms.AlgorithmsTests.test_search_empty_overlapping_last_start_long_pattern_and_ascii) ... ok
+test_search_random_crosscheck_three_methods_and_builtin_oracle (test_algorithms.AlgorithmsTests.test_search_random_crosscheck_three_methods_and_builtin_oracle) ... ok
+test_suffix_empty_single_unique_periodic_and_ascii (test_algorithms.AlgorithmsTests.test_suffix_empty_single_unique_periodic_and_ascii) ... ok
+test_suffix_random_against_literal_suffix_comparison (test_algorithms.AlgorithmsTests.test_suffix_random_against_literal_suffix_comparison) ... ok
+test_tree_empty_negative_ties_and_large_total (test_algorithms.AlgorithmsTests.test_tree_empty_negative_ties_and_large_total) ... ok
+test_tree_random_against_all_vertex_subsets_and_relabeling (test_algorithms.AlgorithmsTests.test_tree_random_against_all_vertex_subsets_and_relabeling) ... ok
+test_lcs_alternative_optima_and_invalid_sequence (test_algorithms.WitnessValidationTests.test_lcs_alternative_optima_and_invalid_sequence) ... ok
+test_merge_alternative_plans_and_invalid_chronology_or_adjacency (test_algorithms.WitnessValidationTests.test_merge_alternative_plans_and_invalid_chronology_or_adjacency) ... ok
+test_suffix_alternative_longest_repeats_and_invalid_sa_lcp_repeat (test_algorithms.WitnessValidationTests.test_suffix_alternative_longest_repeats_and_invalid_sa_lcp_repeat) ... ok
+test_tree_alternative_sets_and_invalid_adjacent_or_duplicate_vertices (test_algorithms.WitnessValidationTests.test_tree_alternative_sets_and_invalid_adjacent_or_duplicate_vertices) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.103s
+
+OK
