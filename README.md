@@ -4,7 +4,7 @@
 
 **Course:** Design and Analysis of Algorithms. **Practical:** 50 points. **Defence:** 50 points. **Availability:** 29 October–8 November 2026, 23:59, for both practical work and defence; Moodle records approved extensions.
 
-Implement six parts with eight commands: LCS; ordered adjacent-block merging; maximum-weight independent set on a tree; naive, KMP and exact Rabin–Karp search; suffix array with Kasai LCP; Aho–Corasick. The work covers syllabus weeks 8–10. This is a starter template: the algorithm methods are TODOs. Read the specification before coding.
+This repository implements six parts with eight commands: LCS; ordered adjacent-block merging; maximum-weight independent set on a tree; naive, KMP and exact Rabin–Karp search; suffix array with Kasai LCP; Aho–Corasick. The work covers syllabus weeks 8–10. The selected implementation is **Python 3.12+**, in `Python/source/algorithms.py`. See [submission notes and commands](SUBMISSION.md), [the English analysis](ANALYSIS.md), and [student tests with saved evidence](tests/student/README.md).
 
 ## Create your repository
 
